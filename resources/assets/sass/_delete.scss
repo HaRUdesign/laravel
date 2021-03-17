@@ -1,0 +1,38 @@
+.delete {
+    .main {
+        padding-top: 100px;
+        padding-bottom: 120px;
+        background-color: $bg;
+    }
+    section {
+        @include w1200();
+        @include padding-width();
+        .title {
+            font-size: $font_title;
+            font-family: TTFirsNeue;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .bar {
+            background-color: $bk;
+            width: 100px;
+            height: 1px;
+            margin: 20px auto;
+        }
+        h2 {
+            font-size: $font_def;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .text {
+            @include w600();
+            margin-top: 30px;
+            font-size: $font_def;
+            background-color: $w;
+            padding: 30px 60px;
+            p {
+                line-height: 1.8;
+            }
+        }
+    }
+}

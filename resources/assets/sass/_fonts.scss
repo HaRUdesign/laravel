@@ -1,0 +1,31 @@
+$font_def: 1.4rem;
+$font_title: 4.2rem;
+$font-small-title: 1.2rem;
+
+@font-face {
+    font-family: "TTFirsNeue";
+    src: url("../fonts/TTFirsNeue-Regular.woff2") format("woff2"),
+        url("../fonts/TTFirsNeue-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "TTFirsNeue";
+    src: url("../fonts/TTFirsNeue-Bold.woff2") format("woff2"),
+        url("../fonts/TTFirsNeue-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NotoSansJP";
+    src: url("../fonts/NotoSansJP-Regular.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NotoSansJP";
+    src: url("../fonts/NotoSansJP-Bold.otf") format("otf");
+    font-weight: bold;
+    font-style: normal;
+}

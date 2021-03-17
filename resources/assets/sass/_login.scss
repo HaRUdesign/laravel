@@ -1,0 +1,49 @@
+.login {
+    .main {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: $bg;
+    }
+    form {
+        @include w600();
+        padding: 30px 30px;
+        border: 1px solid $bk;
+        background-color: $w;
+        text-align: center;
+        p {
+            font-size: $font-small-title;
+            text-align: right;
+            a {
+                color: $key;
+            }
+            &.pass {
+                margin-bottom: 20px;
+            }
+        }
+        .error {
+            color: $err;
+            font-size: $font_def;
+            text-align: left;
+            margin-top: 10px;
+        }
+    }
+    input[type="email"] {
+        width: 100%;
+        padding: 10px 10px;
+        margin-bottom: 30px;
+        background-color: $w;
+        border: 1px solid $bk;
+        font-size: $font_def;
+    }
+    input[type="password"] {
+        width: 100%;
+        padding: 10px 10px;
+        border: 1px solid $bk;
+        background-color: $w;
+        font-size: $font_def;
+    }
+    .btn {
+        @include btn-submit(400px);
+        margin-bottom: 60px;
+    }
+}

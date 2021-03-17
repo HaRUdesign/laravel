@@ -1,0 +1,138 @@
+.create {
+    .main {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: $bg;
+    }
+    .title {
+        text-align: center;
+        font-family: TTFirsNeue;
+        font-size: $font_title;
+    }
+    h1 {
+        text-align: center;
+        font-size: $font-small-title;
+        margin-bottom: 30px;
+    }
+    li {
+        font-size: $font_def;
+    }
+    form {
+        @include w600();
+        background-color: $w;
+        padding: 30px 30px;
+        border: 1px solid $bk;
+        .form-category {
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px 10px;
+            background-color: $w;
+            border: 1px solid $bk;
+            font-size: $font_def;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px 10px;
+            background-color: $w;
+            border: 1px solid $bk;
+            font-size: $font_def;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px 10px;
+            background-color: $w;
+            border: 1px solid $bk;
+            font-size: $font_def;
+        }
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px 10px;
+            background-color: $w;
+            border: 1px solid $bk;
+            font-size: $font_def;
+        }
+        .radio-input {
+            background-color: $w;
+            border: 1px solid $bk;
+            font-size: $font_def;
+        }
+        .radio-input + label {
+            padding-left: 20px;
+            position: relative;
+            margin-right: 20px;
+        }
+        .radio-input + label::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $bk;
+        }
+        .radio-input:checked + label::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 15px;
+            height: 15px;
+            background: $key;
+        }
+        select {
+            width: 20%;
+            padding: 10px 10px;
+            background-color: $w;
+            border: 1px solid $bk;
+            font-size: $font_def;
+        }
+        input[type="checkbox"] + label {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        input[type="checkbox"] + label:before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid $bk;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.12s, border-color 0.08s;
+        }
+        input[type="checkbox"]:checked + label:before {
+            width: 10px;
+            width: 15px;
+            height: 15px;
+            background-color: $key;
+        }
+        textarea {
+            width: 100%;
+            height: 400px;
+            padding: 10px 10px;
+            background-color: $w;
+            border: 1px solid $bk;
+            font-size: $font_def;
+        }
+        .btn {
+            @include btn-submit(400px);
+        }
+        .error {
+            color: $err;
+            font-size: $font_def;
+            margin-top: 10px;
+        }
+        .required {
+            color: $err;
+        }
+    }
+}

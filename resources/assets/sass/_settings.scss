@@ -1,0 +1,83 @@
+//変数
+$radius-btn: 16px;
+
+//move
+$hover-btn: 0.6s;
+
+@mixin padding-width() {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@mixin w1940() {
+    width: 100%;
+    max-width: 1940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin w1200() {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin w900 {
+    max-width: 900px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin w600() {
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+    align-items: stretch;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-left {
+    display: flex;
+    justify-content: flex-start;
+}
+.flex-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin btn($width) {
+    margin-top: 60px;
+    text-align: center;
+
+    a {
+        font-size: $font_def;
+        width: $width;
+        color: $key;
+        border: 1px solid $key;
+        background-color: $w;
+        padding: 20px 30px;
+        display: inline-block;
+    }
+}
+@mixin btn-submit($width) {
+    margin-top: 60px;
+    text-align: center;
+
+    input[type="submit"] {
+        font-size: $font_def;
+        width: $width;
+        color: $key;
+        border: 1px solid $key;
+        background-color: $w;
+        padding: 20px 30px;
+        display: inline-block;
+    }
+}

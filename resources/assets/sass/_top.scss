@@ -1,0 +1,60 @@
+.top {
+    .main {
+        color: $bk;
+        padding-bottom: 120px;
+        .title {
+            font-family: TTFirsNeue;
+            font-size: $font_title;
+            text-align: center;
+        }
+        .bar {
+            background-color: $bk;
+            width: 100px;
+            height: 1px;
+            margin: 20px auto;
+        }
+        h2 {
+            font-size: $font-small-title;
+            text-align: center;
+        }
+    }
+    .mv {
+        @include w1940();
+        height: 100vh;
+        overflow: hidden;
+        .mv-img {
+            @include w1940();
+            height: 100vh;
+            position: absolute;
+            z-index: -1;
+            img {
+                object-fit: cover;
+            }
+        }
+        .mv-ol {
+            @include w1940();
+            height: 100vh;
+            position: absolute;
+            z-index: 0;
+            background-color: $mv_ol;
+            opacity: 0.4;
+        }
+    }
+    .lesson {
+        @include w1200();
+        margin-top: 60px;
+        ul {
+            margin-top: 30px;
+            li {
+                h3 {
+                    font-size: $font_def;
+                    margin-top: 10px;
+                }
+                &:nth-of-type(2) {
+                    margin-left: 30px;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}

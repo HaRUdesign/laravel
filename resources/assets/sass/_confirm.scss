@@ -1,0 +1,51 @@
+.confirm {
+    .main {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: $bg;
+    }
+    .title {
+        text-align: center;
+        font-family: TTFirsNeue;
+        font-size: $font_title;
+    }
+    h1 {
+        text-align: center;
+        font-size: $font-small-title;
+        margin-bottom: 30px;
+    }
+    li {
+        font-size: $font_def;
+        margin-bottom: 10px;
+    }
+    form {
+        @include w600();
+        background-color: $w;
+        padding: 30px 30px;
+        border: 1px solid $bk;
+        .flex {
+            margin-top: 60px;
+        }
+
+        .submit-back {
+            font-size: $font_def;
+            width: 50%;
+            margin-right: 15px;
+            color: $key;
+            border: 1px solid $key;
+            background-color: $w;
+            padding: 20px 30px;
+            display: inline-block;
+        }
+        .submit {
+            font-size: $font_def;
+            width: 50%;
+            margin-left: 15px;
+            color: $key;
+            border: 1px solid $key;
+            background-color: $w;
+            padding: 20px 30px;
+            display: inline-block;
+        }
+    }
+}

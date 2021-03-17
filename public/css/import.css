@@ -1,0 +1,21 @@
+/* *****************************
+ *
+ * Import CSS file.
+ *
+ **************************** */
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
+@import url("html5reset-1.6.1.css");
+
+@import url("https://use.fontawesome.com/releases/v5.6.1/css/all.css");
+
+@import url("flickity.css");
+
+/* PC */
+@import url("common.css") screen and (min-width: 960px);
+
+/* TABLET */
+/* @import url("common-tb.css") screen and (min-width: 415px) and (max-width: 959px); */
+
+/* SP */
+/* @import url("common-sp.css") screen and (min-width: 320px) and (max-width: 414px); */

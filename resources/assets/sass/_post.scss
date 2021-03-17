@@ -1,0 +1,75 @@
+.post {
+    .main {
+        color: $bk;
+        background-color: $bg;
+        padding-bottom: 120px;
+    }
+    section {
+        @include w900();
+        text-align: center;
+        .title {
+            font-size: $font_title;
+            font-family: TTFirsNeue;
+            margin-top: 60px;
+        }
+        .bar {
+            background-color: $bk;
+            width: 100px;
+            height: 1px;
+            margin: 20px auto;
+        }
+        h2 {
+            font-size: $font_def;
+            margin-bottom: 30px;
+        }
+        .point {
+            font-size: $font_def;
+            text-align: left;
+            margin-bottom: 60px;
+            line-height: 2;
+        }
+        .wrap {
+            align-items: center;
+            border: 1px solid $bk;
+            padding: 30px 30px;
+            margin-bottom: 30px;
+            background-color: $w;
+            & + p {
+                font-size: $font_def;
+            }
+            .notice-1 {
+                width: 70%;
+                padding-right: 30px;
+                h3 {
+                    font-size: $font_def;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: $font-small-title;
+                    text-align: left;
+                    line-height: 1.8;
+                }
+            }
+            .notice-2 {
+                width: 30%;
+                padding-left: 30px;
+                border-left: 1px solid $bk;
+                h3 {
+                    font-size: $font_def;
+                    font-weight: bold;
+                    line-height: 1.4;
+                    text-align: left;
+                    margin-bottom: 30px;
+                }
+                p {
+                    font-size: $font_def;
+                    text-align: center;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+    .btn {
+        @include btn(400px);
+    }
+}

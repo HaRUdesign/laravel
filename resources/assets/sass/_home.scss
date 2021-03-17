@@ -1,0 +1,28 @@
+.home {
+    .main {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: $bg;
+    }
+    .s-1 {
+        @include w1200();
+        @include padding-width();
+        align-items: center;
+        h1 {
+            width: 50%;
+            font-size: $font_def;
+        }
+        .wrap {
+            width: 50%;
+            align-items: center;
+            font-size: $font_def;
+            .logout {
+                margin-left: 60px;
+                border: 1px solid $bk;
+                background-color: $w;
+                padding: 10px 20px;
+                line-height: 1;
+            }
+        }
+    }
+}
