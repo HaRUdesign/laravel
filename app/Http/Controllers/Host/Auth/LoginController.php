@@ -18,7 +18,7 @@ class LoginController extends Controller
 
     // protected $redirectTo = RouteServiceProvider::HOST_HOME;
     // public $redirectTo = '/host/dashboard';    // ここを変更する
-    // protected $redirectTo ='/host/dashboard';
+    protected $redirectTo ='/host/home';
 
 
     public function __construct()
@@ -27,10 +27,10 @@ class LoginController extends Controller
     }
 
     // Guardの認証方法を指定
-    protected function guard()
-    {
-        return Auth::guard('host');
-    }
+    // protected function guard()
+    // {
+    //     return Auth::guard('host');
+    // }
 
 //******************ログイン画面******************//
     public function showLoginForm()
@@ -45,8 +45,8 @@ class LoginController extends Controller
            'host_mail' => ['required', 'string', 'email'],
            'host_pass' => ['required', 'string'],
        ]);
-            dd($request);
-           if($host = Host::where(['host_mail'=> $request->host_mail,])->first()){
+
+           if($host = Host::where('host_mail',$request->host_mail)->first()){
 
                 if(Hash::check($request->host_pass, $host->host_pass)){
 
@@ -58,8 +58,12 @@ class LoginController extends Controller
                     // Auth::guard("host")->loginUsingId($host->host_id);
                     // dd($host->host_id);
 
-                    return redirect(route('host.home.index'));
+                    // dd(Auth::id());
+
+                    // return redirect(route('host.home.index'));
                     // return redirect()->route('host.dashboard');
+
+                    return redirect()->to('/host/home/');
 
                 }
 

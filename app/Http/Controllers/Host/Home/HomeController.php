@@ -18,13 +18,14 @@ use App\Helpers\Aggregation;
 
 class HomeController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:host');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth:host');
+    // }
+
 
 /****************ダッシュボード*****************/
-    public function show()
+    public function index()
     {
         //集計欄
         // 合計ユーザー数

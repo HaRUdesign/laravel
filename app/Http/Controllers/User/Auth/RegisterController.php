@@ -20,10 +20,13 @@ class RegisterController extends Controller
 {
     use RegistersUsers;
     protected $redirectTo = RouteServiceProvider::HOME;
+
     public function __construct()
     {
-        $this->middleware('guest:user');
+        $this->middleware('guest');
+
     }
+
     protected function guard()
     {
         return Auth::guard('user');
@@ -88,7 +91,9 @@ class RegisterController extends Controller
 		}
         //ここでメールを送信するなどを行う
 
-        event(new Registered($user = $this->register($input)));
+        // event(new Registered($user = $this->register($input)));
+        $this->register($input);
+
         // $this->guard()->login($user);
         // if ($response = $this->registered($request, $user)) {
         //     return $response;

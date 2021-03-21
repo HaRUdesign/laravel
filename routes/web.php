@@ -12,10 +12,10 @@ Route::get('/posts/{post}','Web\CommonController@showPost')
 /************************************************/
 
 // ユーザー
-Route::prefix('user')->group(function(){
+Route::group(['prefix' => 'user', 'middleware' => 'guest'], function() {
   // ユーザーログイン
   Route::get('login','User\Auth\LoginController@showLoginForm');
-  Route::post('login','User\Auth\LoginController@authenticate')->name('user.login');
+  Route::post('login','User\Auth\LoginController@authenticated')->name('user.login');
   Route::get('logout','User\Auth\LoginController@logout')->name('user.logout');
 
   // ユーザー登録
@@ -25,10 +25,10 @@ Route::prefix('user')->group(function(){
 });
 
 
-/************************************************/
+
 
 // ユーザーダッシュボード
-Route::prefix('home')->group(function(){
+Route::group(['prefix' => 'home', 'middleware' => 'auth:user'], function() {
 
   Route::get('/','User\Home\HomeController@index')->name('user.home.index');
 
@@ -45,10 +45,19 @@ Route::prefix('home')->group(function(){
   Route::get('payment', 'User\Home\PaymentController@index')->name('user.payment.index');
   Route::get('payment/create', 'User\Home\PaymentController@create')->name('user.payment.create');
   Route::post('payment/store', 'User\Home\PaymentController@store')->name('user.payment.store');
-
 });
 
 /************************************************/
+
+
+
+
+
+
+
+
+
+
 
 // ホスト
 Route::prefix('host')->group(function(){
@@ -106,17 +115,17 @@ Route::prefix('host')->group(function(){
 // イベント投稿
 // Route::get('post/{post}','Host\Post\PostController@showRegistrationForm')->name('post.show');
 
-Route::get('post/{post}/edit','Host\Post\PostController@edit')->name('host.post.edit');
+// Route::get('post/{post}/edit','Host\Post\PostController@edit')->name('host.post.edit');
 
-Route::patch('post/{post}','Host\Post\PostController@updatePost')->name('host.post.update');
-
-
+// Route::patch('post/{post}','Host\Post\PostController@updatePost')->name('host.post.update');
 
 
 
 
-Route::get('host/post-register','Host\Post\PostController@showRegistrationForm')->name('host.post.showRegister');
-Route::post('host/post-confirm','Host\Post\PostController@getRegistration')->name('host.post.confirm');
+
+
+// Route::get('host/post-register','Host\Post\PostController@showRegistrationForm')->name('host.post.showRegister');
+// Route::post('host/post-confirm','Host\Post\PostController@getRegistration')->name('host.post.confirm');
 
 
 
@@ -154,8 +163,8 @@ Route::get('events/event1','Event\EventController@showEvent1')->name('event.even
 
 
 // ホストダッシュボード/memberlistの詳細
-Route::get('host/member/id={id}','Host\HomeController@showMember')->name('host.member');
+// Route::get('host/member/id={id}','Host\HomeController@showMember')->name('host.member');
 // ホストダッシュボード/member修正
 
-Route::get('host/member/edit/{id}','Host\HomeController@editMember')->name('host.editMember');
-Route::post('host/member/{user:user_id}','Host\HomeController@updateMember')->name('host.updateMember');
+// Route::get('host/member/edit/{id}','Host\HomeController@editMember')->name('host.editMember');
+// Route::post('host/member/{user:user_id}','Host\HomeController@updateMember')->name('host.updateMember');
